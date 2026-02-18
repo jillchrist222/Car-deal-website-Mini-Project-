@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service | Ingis-GT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- SAME NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Ingis GT">
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="service.html" class="active">Services</a></li>
+        <li><a href="carlisting.html">Car Listing</a></li>
+        <li><a href="#footerSec">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="service-hero">
+
+    <!-- LEFT IMAGE -->
+    <div class="service-image">
+        <img src="https://d2hucwwplm5rxi.cloudfront.net/wp-content/uploads/2022/08/23083441/Car-Wash-Home-Service-_-Cover-23-8-22.jpg" alt="Service Car">
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="service-content">
+        <img src="images/logo.png" class="service-logo" alt="Logo">
+
+        <h1>Living progress<br>in every detail</h1>
+        <p class="subtitle">GT Service</p>
+
+        <button class="btn"
+            onclick="openService()">
+            Book a Service Now
+        </button>
+
+        <p class="note">
+            T&C Apply. Image for representation purpose only.
+        </p>
+    </div>
+</section>
+<section id="serviceForm" class="service-section">
+  <div class="service-container">
+
+    <h2>Car Service Booking Form</h2>
+
+    <input type="date" id="date" placeholder="Select appointment date">
+    <input type="text" id="vehicle" placeholder="Vehicle Type">
+    <input type="number" id="year" placeholder="Year of Manufacture">
+    <input type="text" id="service" placeholder="Service Type">
+
+    <textarea id="problem" placeholder="What problem are you facing?"></textarea>
+
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="tel" id="phone" placeholder="Phone Number">
+
+    <!-- BUTTON MUST BE INSIDE -->
+    <button type="button" class="submit-btn" onclick="serviceSendToWhatsapp()">
+        Submit Booking
+    </button>
+  </div>
+</section>
+<div id="bookingPopup" class="popup">
+  <div class="popup-box">
+    <div class="tick">✔</div>
+    <h3>Booking Successful!</h3>
+    <p>Thank you for booking with us.</p>
+    <button onclick="closeBookingPopup()">OK</button>
+  </div>
+</div>
+<footer class="footer"id="footerSec">
+    <div class="footer-content">
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fhome"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.google.com/"><i class="fab fa-google"></i></a>
+            <a href="https://www.youtube.com/?gl=IN"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Footer Links -->
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://www.autocarindia.com/">News</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html">Contact Us</a></li>
+            <li><a href="about.html">Our Team</a></li>
+        </ul>
+
+    </div>
+
+    <div class="footer-bottom">
+        Copyright © 2026 | Designed by Ingis-GT
+    </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store |Ingis-GT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- SAME NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Ingis GT">
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="store.html" class="active">Store</a></li>
+        <li><a href="service.html" >Services</a></li>
+        <li><a href="carlisting.html">Car Listing</a></li>
+        <li><a href="#footerSec">Contact</a></li>
+    </ul>
+</nav>
+<!-- AD CAROUSEL -->
+<section class="hero-carousel">
+  <div class="slides">
+    <img src="https://favbulous.com/wp-content/uploads/uploaded/car%20ads/ssangyonga%201.jpg" class="slide active" />
+    <img src="https://i.ytimg.com/vi/PzohveNpt18/maxresdefault.jpg" class="slide" />
+    <img src="https://www.thedetroitbureau.com/wp-content/uploads/2018/10/Ford-ad-truck.jpg" class="slide" />
+  </div>
+  <div class="dots">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+</section>
+<section class="car-products">
+    <!-- CART ICON -->
+<a href="cart.html" class="cart-icon">
+  🛒
+  <span id="cartCount">0</span>
+</a>
+  <h2>Car Accessories</h2>
+
+  <div class="product-grid">
+
+    <!-- Accessory 1 -->
+    <div class="car-cards">
+      <img src="https://cdn4.wheelbasealloys.com/product-images/product-344064_3231_600.jpg" alt="Alloy Wheels">
+      <h3>Alloy Wheels</h3>
+
+      <div class="rating">
+        ⭐⭐⭐⭐⭐
+      </div>
+
+      <p class="price">₹ 85,000</p>
+
+      <div class="actions">
+        <button class="buy" onclick="buyNow('Alloy Wheels',85000,'https://cdn4.wheelbasealloys.com/product-images/product-344064_3231_600.jpg')">Buy Now</button>
+       <button class="order" onclick="addToCart(
+  'Alloy Wheels',
+  85000,
+  'https://cdn4.wheelbasealloys.com/product-images/product-344064_3231_600.jpg'
+)">Add To Cart</button>
+      </div>
+    </div>
+
+    <!-- Accessory 2 -->
+    <div class="car-cards">
+      <img src="https://m.media-amazon.com/images/I/71gb5ACKCyL._AC_SL1500_.jpg" alt="Car Seat Cover">
+      <h3>Premium Seat Cover</h3>
+
+      <div class="rating">
+        ⭐⭐⭐⭐☆
+      </div>
+
+      <p class="price">₹ 18,000</p>
+
+      <div class="actions">
+        <button class="buy" onclick="buyNow('Premium Seat Cover',18000,'https://m.media-amazon.com/images/I/71gb5ACKCyL._AC_SL1500_.jpg')">Buy Now</button>
+        <button class="order"onclick="addToCart('Premium Seat Cover',18000,'https://m.media-amazon.com/images/I/71gb5ACKCyL._AC_SL1500_.jpg')">Add To Cart</button>
+      </div>
+    </div>
+
+    <!-- Accessory 3 -->
+    <div class="car-cards">
+      <img src="https://m.media-amazon.com/images/I/71xGU7TQJlL._AC_SL1500_.jpg" alt="Dash Camera">
+      <h3>4K Dash Camera</h3>
+
+      <div class="rating">
+        ⭐⭐⭐⭐⭐
+      </div>
+
+      <p class="price">₹ 12,500</p>
+
+      <div class="actions">
+         <button class="buy"onclick="buyNow('4K Dash Camera',12500,'https://m.media-amazon.com/images/I/71xGU7TQJlL._AC_SL1500_.jpg')">Buy Now</button>
+        <button class="order"onclick="addToCart('4K Dash Camera',12500,'https://m.media-amazon.com/images/I/71xGU7TQJlL._AC_SL1500_.jpg')">Add To Cart</button>
+      </div>
+    </div>
+
+    <!-- Accessory 4 -->
+    <div class="car-cards">
+      <img src="https://m.media-amazon.com/images/I/81vlPkYc5QL._AC_.jpg" alt="Car Vacuum Cleaner">
+      <h3>Car Vacuum Cleaner</h3>
+
+      <div class="rating">
+        ⭐⭐⭐⭐☆
+      </div>
+
+      <p class="price">₹ 4,999</p>
+
+      <div class="actions">
+        <button class="buy" onclick="buyNow('Car Vacuum Cleaner',4999,'https://m.media-amazon.com/images/I/81vlPkYc5QL._AC_.jpg')">Buy Now</button>
+        <button class="order" onclick="addToCart('Car Vacuum Cleaner',4999,'https://m.media-amazon.com/images/I/81vlPkYc5QL._AC_.jpg')">Add To Cart</button>
+      </div>
+    </div>
+ <!-- Accessory 5 -->
+    <div class="car-cards">
+      <img src="https://nestasia.in/cdn/shop/files/Premium-Quilted-Car-Neck-Rest-Pillows_5.jpg?v=1732347276" alt="Car Neck Pillow">
+      <h3>Car Neck Pillow</h3>
+
+      <div class="rating">
+        ⭐⭐⭐⭐☆
+      </div>
+
+      <p class="price">₹450.00</p>
+
+      <div class="actions">
+        <button class="buy" onclick="buyNow('Car Neck Pillow',450.00,'https://nestasia.in/cdn/shop/files/Premium-Quilted-Car-Neck-Rest-Pillows_5.jpg?v=1732347276')">Buy Now</button>
+        <button class="order" onclick="addToCart('Car Neck Pillow',450.00,'https://nestasia.in/cdn/shop/files/Premium-Quilted-Car-Neck-Rest-Pillows_5.jpg?v=1732347276')">Add To Cart</button>
+      </div>
+    </div>
+     <!-- Accessory 6 -->
+    <div class="car-cards">
+      <img src="https://i5.walmartimages.com/seo/BCZHQQ-Car-Trash-Can-Mini-Collapsible-Pop-up-Car-Garbage-Can-Waterproof-Hanging-Car-Trash-Bag-with-Velcro-Car-Trash-Bin-Summer-Clearance_a1d3faa0-34ce-4a2d-9726-5910b7ea07c9.73fe4185566b4c9ec54fbffaff8edff1.jpeg" alt="Mini Car Trash">
+      <h3>Mini Car Trash</h3>
+
+      <div class="rating">
+        ⭐⭐⭐⭐☆
+      </div>
+
+      <p class="price">₹200.00</p>
+
+      <div class="actions">
+         <button class="buy" onclick="buyNow('Mini Car Trash',200.00,'https://i5.walmartimages.com/seo/BCZHQQ-Car-Trash-Can-Mini-Collapsible-Pop-up-Car-Garbage-Can-Waterproof-Hanging-Car-Trash-Bag-with-Velcro-Car-Trash-Bin-Summer-Clearance_a1d3faa0-34ce-4a2d-9726-5910b7ea07c9.73fe4185566b4c9ec54fbffaff8edff1.jpeg')">Buy Now</button>
+        <button class="order" onclick="addToCart('Mini Car Trash',200.00,'https://i5.walmartimages.com/seo/BCZHQQ-Car-Trash-Can-Mini-Collapsible-Pop-up-Car-Garbage-Can-Waterproof-Hanging-Car-Trash-Bag-with-Velcro-Car-Trash-Bin-Summer-Clearance_a1d3faa0-34ce-4a2d-9726-5910b7ea07c9.73fe4185566b4c9ec54fbffaff8edff1.jpeg')">Add To Cart</button>
+      </div>
+    </div>
+<!-- Accessory 7 -->
+    <div class="car-cards">
+      <img src="https://m.media-amazon.com/images/I/711pTh86caS.jpg" alt="Car Tool Kit">
+      <h3> Car Tool Kit</h3>
+
+      <div class="rating">
+        ⭐⭐⭐⭐☆
+      </div>
+
+      <p class="price">₹8,000</p>
+
+      <div class="actions">
+         <button class="buy" onclick="buyNow('Car Tool Kit',8000,'https://m.media-amazon.com/images/I/711pTh86caS.jpg')">Buy Now</button>
+        <button class="order" onclick="addToCart('Car Tool Kit',8000,'https://m.media-amazon.com/images/I/711pTh86caS.jpg')">Add To Cart</button>
+      </div>
+    </div>
+
+    <!-- Accessory 8 -->
+    <div class="car-cards">
+      <img src="https://twomonkeystravelgroup.com/wp-content/uploads/2020/10/20-Best-Car-Interior-Accessories-for-an-Awesome-Roadtrip8.jpg" alt="Car Tool Kit">
+      <h3> Car Roadtrip</h3>
+
+      <div class="rating">
+       ⭐⭐⭐⭐⭐
+      </div>
+
+      <p class="price">₹5,000</p>
+
+      <div class="actions">
+         <button class="buy" onclick="buyNow('Car Roadtrip',5000,'https://twomonkeystravelgroup.com/wp-content/uploads/2020/10/20-Best-Car-Interior-Accessories-for-an-Awesome-Roadtrip8.jpg')">Buy Now</button>
+        <button class="order" onclick="addToCart('Car Roadtrip',5000,'https://twomonkeystravelgroup.com/wp-content/uploads/2020/10/20-Best-Car-Interior-Accessories-for-an-Awesome-Roadtrip8.jpg')">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="footerSec">
+    <div class="footer-content">
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fhome"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.google.com/"><i class="fab fa-google"></i></a>
+            <a href="https://www.youtube.com/?gl=IN"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Footer Links -->
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://www.autocarindia.com/">News</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html">Contact Us</a></li>
+            <li><a href="about.html">Our Team</a></li>
+        </ul>
+
+    </div>
+
+    <div class="footer-bottom">
+        Copyright © 2026 | Designed by Ingis-GT
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

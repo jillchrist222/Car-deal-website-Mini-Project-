@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 class="cart-title">Your Cart</h2>
+
+<div id="cartItems" class="cart-container"></div>
+
+<div class="cart-summary">
+  <h3>Total: ₹ <span id="totalPrice">0</span></h3>
+  <button class="checkout-btn" onclick="goToCartAddress()">Checkout</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+  loadCart();
+</script>
+</body>
+</html>

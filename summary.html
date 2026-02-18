@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<body>
+
+<div class="summary-wrapper">
+    <div class="summary-card">
+        <h2>Order Summary</h2>
+
+        <div class="summary-product">
+            <img id="summaryImage" src="" alt="Product">
+            
+            <div class="summary-details">
+                <h4 id="summaryName"></h4>
+                <p>Price: ₹<span id="summaryPrice"></span></p>
+            </div>
+        </div>
+
+        <div class="summary-total">
+            Total: ₹<span id="summaryTotal"></span>
+        </div>
+
+        <button class="payment-btn" onclick="goToPayment()">
+            Proceed to Payment
+        </button>
+    </div>
+</div>
+
+<script src="summary.js"></script>
+</body>
+</html>

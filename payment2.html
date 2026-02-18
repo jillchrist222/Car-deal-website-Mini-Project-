@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="shipping-wrapper">
+    <div class="shipping-card">
+
+        <h2>Payment Method</h2>
+
+        <div class="cod-box">
+            <input type="radio" id="cod" name="Payment" checked />
+            <label>Cash on Delivery (COD)</label>
+        </div>
+
+       <button type="button" class="payment-btn" onclick="confirmFinalOrder()">Place Order</button>
+    </div>
+</div>
+<!-- ORDER STATUS POPUP -->
+<div id="orderStatusPopup" class="status-popup">
+    <div class="status-card">
+        <h2 id="statusTitle"></h2>
+        <p id="statusMessage"></p>
+        <button onclick="closeStatus()">OK</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
