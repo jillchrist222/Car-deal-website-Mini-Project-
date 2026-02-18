@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingis-GT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="Ingis GT">
+    </div>
+    <ul>
+        <li><a href="index.html" class="active" > Home</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="carlisting.html">Car Listing</a></li>
+        <li><a href="#footerSec">Contact</a></li>
+        <li><button id="themeToggle" class="theme-btn">🌛</button></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>ULTIMATE HORSE ON<br>THE TRACK</h1>
+        <p>Let us help you get your next car!</p>
+        <button class="btn" onclick="goShowRoom()">Discover IgnisGT</button>
+    </div>
+</section>
+
+<!-- SEARCH SECTION (SEPARATE) -->
+<section class="search-section">
+    <div class="search-box">
+      <select id="brandFilter">
+            <option value="">Select Brand</option>
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Benz">Benz</option>
+            <option value="Toyota">Toyota</option>
+            <option value="MG">MG</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Tata">Tata</option>
+            <option value="Mahindra">Mahindra</option>
+            <option value="Ford">Ford</option>
+            <option value="Volkswagen">Volkswagen</option>
+        </select>
+
+        <!-- MAKE / MODEL -->
+        <select id="priceFilter">
+  <option value="">Filter</option>
+  <option value="350000-700000">₹3.5L - ₹7L</option>
+  <option value="700000-1200000">₹7L - ₹12L</option>
+  <option value="1200000-2500000">₹12L - ₹25L</option>
+  <option value="2500000-6000000">₹25L - ₹60L</option>
+  <option value="6000000-99999999">₹60L+</option>
+</select>
+
+        <!-- LOCATION -->
+        <select id="locationFilter">
+            <option value="">Select Location</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Pune">Pune</option>
+            <option value="Kochi">Kochi</option>
+        </select>
+
+        <!-- CAR TYPE -->
+        <select id="fuelFilter">
+            <option value=""> Select Fuel</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+             <option value="Electric">Electric</option>
+            
+        </select>
+
+        <!-- BUTTON -->
+        <button class="search-btn" onclick="filterCars()">SEARCH</button>
+
+    </div>
+</section>
+<!-- CAR LISTING SECTION -->
+<section class="car-listing">
+    <h2>Available Cars</h2>
+
+    <div class="car-grid">
+
+        <div class="car-card"
+        data-brand="Audi"
+        data-price="4500000"
+        data-location="Chennai"
+        data-fuel="Petrol">
+            <img src="https://images.dealer.com/ddc/vehicles/2025/Audi/A4/Sedan/perspective/front-left/2025_76.png" alt="Audi A4">
+            <h3>Audi A4</h3>
+            <p class="price">₹ 45,00,000</p>
+            <p class="type">Sedan • Petrol</p>
+            <div class="car-action">
+<button class="book-btn" onclick="openBooking('Audi A4','₹45,00,000')">Book Now</button>
+            </div>
+        </div>
+
+        <div class="car-card"
+         data-brand="BMW"
+        data-price="8500000"
+        data-location="Bangalore"
+        data-fuel="Diesel">
+            <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/51223/2023-BMW-X5-front_51223_032_2400x1800_A96.png" alt="BMW X5">
+            <h3>BMW X5</h3>
+            <p class="price">₹ 85,00,000</p>
+            <p class="type">SUV • Diesel</p>
+            <div class="car-action">
+<button class="book-btn" onclick="openBooking('BMW X5','₹85,00,000')">Book Now</button>
+            </div>
+        </div>
+
+        <div class="car-card"
+         data-brand="Benz"
+        data-price="5500000"
+        data-location="Chennai"
+        data-fuel="Petrol">
+            <img src="https://purepng.com/public/uploads/large/51506280107ffzsvfvjd4qlimlnbbydt1s3j2yhualg4zw93mltbpogvhtk51zdxhrwvce5chdwmjpi1gev6ssq6ciisnjjcc7buabhp7d5p1v1.png" alt="Mercedes C-Class">
+            <h3>Mercedes-Benz C-Class</h3>
+            <p class="price">₹ 55,00,000</p>
+            <p class="type">Sedan • Petrol</p>
+            <div class="car-action">
+<button class="book-btn" onclick="openBooking('Mercedes-Benz C-Class','₹55,00,000')">Book Now</button>
+            </div>
+        </div>
+
+        <div class="car-card"
+         data-brand="Tata"
+        data-price="1800000"
+        data-location="Hyderabad"
+        data-fuel="Electric">
+            <img src="https://www.cartoq.com/wp-content/uploads/2023/10/tata-nexon-green.png" alt="Tata Nexon EV">
+            <h3>Tata Nexon EV</h3>
+            <p class="price">₹ 18,00,000</p>
+            <p class="type">SUV • Electric</p>
+            <div class="car-action">
+<button class="book-btn" onclick="openBooking('Tata Nexon EV','₹18,00,000')">Book Now</button>
+            </div>
+        </div>
+
+        <div class="car-card"
+         data-brand="Mahindra"
+        data-price="1600000"
+        data-location="Mumbai"
+        data-fuel="Diesel">
+            <img src="https://stimg.cardekho.com/images/car-images/930x620/Mahindra/Thar/6723/1723640626958/225_EverestWhite_e0e0de.jpg?imwidth=890&impolicy=resize" alt="Mahindra Thar">
+            <h3>Mahindra Thar</h3>
+            <p class="price">₹ 16,00,000</p>
+            <p class="type">SUV • Diesel</p>
+            <div class="car-action">
+<button class="book-btn" onclick="openBooking('Mahindra Thar','₹16,00,000')">Book Now</button>
+            </div>
+        </div>
+
+        <div class="car-card"
+         data-brand="Toyota"
+        data-price="5200000"
+        data-location="Delhi"
+        data-fuel="Diesel">
+            <img src="https://www.pngmart.com/files/22/Toyota-Fortuner-PNG.png" alt="Toyota Fortuner">
+            <h3>Toyota Fortuner</h3>
+            <p class="price">₹ 52,00,000</p>
+            <p class="type">SUV • Diesel</p>
+            <div class="car-action">
+<button class="book-btn" onclick="openBooking('Toyota Fortuner','₹52,00,000')">Book Now</button>
+            </div>
+        </div>
+  
+        <div class="car-card"
+        data-brand="Audi"
+        data-price="6400000"
+        data-location="Bangalore"
+        data-fuel="Petrol">
+            <img src="https://www.pngarts.com/files/11/Audi-A6-PNG-Transparent-Image.png" alt="Audi A4">
+            <h3>Audi A6</h3>
+            <p class="price">₹ 64,00,000</p>
+            <p class="type">Sedan • Petrol</p>
+            <div class="car-action">
+<button class="book-btn" onclick="openBooking('Audi A6','₹64,00,000')">Book Now</button>
+            </div>
+        </div>
+
+         <div class="car-card"
+        data-brand="Hyundai"
+        data-price="650000"
+        data-location="Pune"
+        data-fuel="Petrol">
+            <img src="https://img.indianautosblog.com/2014/11/Hyundai-Grand-i10-Sedan-Xcent-official-image.jpg" alt="Hyundai grand i10 nios">
+            <h3>Hyundai grand i10 nios</h3>
+            <p class="price">₹ 650,000</p>
+            <p class="type">Sedan • Petrol</p>
+            <div class="car-action">
+<button class="book-btn" onclick="openBooking('Hyundai grand i10 nios','₹650,000')">Book Now</button>
+            </div>
+        </div>
+
+         <div class="car-card"
+        data-brand="Tata"
+        data-price="500000"
+        data-location="Pune"
+        data-fuel="Petrol">
+            <img src="https://imgd-ct.aeplcdn.com/0x0/n/cw/ec/41160/tata-tigor-right-front-three-quarter3.jpeg?q=75" alt="Tata Tigor XE">
+            <h3>Tata Tigor </h3>
+            <p class="price">₹ 5,00,000</p>
+            <p class="type">XE • Petrol</p>
+            <div class="car-action">
+<button class="book-btn" onclick="openBooking('Tata Tigor','₹5,00,000')">Book Now</button>
+            </div>
+        </div>
+
+        
+         <div class="car-card"
+        data-brand="MG"
+        data-price="2000000"
+        data-location="Pune"
+        data-fuel="Diesel">
+            <img src="https://img.indianautosblog.com/2020/04/08/mg-hector-plus-white-exterior-ae96.jpg" alt="MG PLUS">
+            <h3>MG PLUS </h3>
+            <p class="price">₹ 2,000,000</p>
+            <p class="type">SUV • Diesel</p>
+            <div class="car-action">
+<button class="book-btn" onclick="openBooking('MG PLUS','₹2,000,000')">Book Now</button>
+            </div>
+        </div>
+
+        
+         <div class="car-card"
+        data-brand="Ford"
+        data-price="1000000"
+        data-location="kochi"
+        data-fuel="Diesel">
+            <img src="https://www.pngmart.com/files/9/Ford-PNG-Clipart.png" alt="Ford Focus">
+            <h3>Ford Focus </h3>
+            <p class="price">₹ 1,000,000</p>
+            <p class="type">Sedan • Petrol</p>
+            <div class="car-action">
+<button class="book-btn" onclick="openBooking('Ford Focus','₹1,000,000')">Book Now</button>
+            </div>
+        </div>
+    </div>
+    <p id="noCarsMsg" style="display:none; color:red; text-align:center;">
+  No cars found
+</p>
+</section>
+<!-- BOOKING MODAL -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+
+      <span class="close-btn" onclick="closeModal()">❌</span>
+
+      <h2>BOOK A CAR</h2>
+
+      <input type="text" id="name" placeholder="Enter your name">
+      <input type="email" id="email" placeholder="Enter your email">
+      <input type="tel" id="phone" placeholder="Enter phone number">
+      <input type="text" id="pickup" placeholder="Pickup location">
+      <input type="text" id="destination" placeholder="Destination">
+      <input type="date" id="date">
+      <input type="time" id="time">
+
+      <button type="button" class="book-submit" onclick="sendToWhatsApp()">BOOK NOW</button>
+
+  </div>
+</div>
+<!-- SUCCESS POPUP -->
+<div id="successPopup" class="success-popup">
+    <div class="success-content">
+        <div class="success-icon">✔</div>
+        <h3>Booking Successful!</h3>
+        <p>Thank you for booking with us.</p>
+        <button onclick="closeSuccess()">OK</button>
+    </div>
+</div>
+<!-- FOOTER -->
+<footer class="footer" id="footerSec">
+    <div class="footer-content">
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fhome"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.google.com/"><i class="fab fa-google"></i></a>
+            <a href="https://www.youtube.com/?gl=IN"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Footer Links -->
+        <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="https://www.autocarindia.com/">News</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="about.html">Contact Us</a></li>
+            <li><a href="about.html">Our Team</a></li>
+        </ul>
+
+    </div>
+
+    <div class="footer-bottom">
+        Copyright © 2026 | Designed by Ingis-GT
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
